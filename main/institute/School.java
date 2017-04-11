@@ -1,9 +1,10 @@
-package mentor.main;
+package mentor.main.institute;
 
 import java.util.*;
 import java.io.*;
 
-import mentor.main.*;
+import mentor.main.person.*;
+import mentor.main.institute.*;
 
 public class School extends Institute {
 
