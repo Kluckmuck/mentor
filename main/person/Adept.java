@@ -1,9 +1,10 @@
-package mentor.main;
+package mentor.main.person;
 
 import java.util.*;
 import java.io.*;
 
-import mentor.main.*;
+import mentor.main.person.*;
+import mentor.main.institute.*;
 
 public class Adept extends Person {
 
