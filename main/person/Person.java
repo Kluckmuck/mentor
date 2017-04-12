@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 
 import mentor.main.person.*;
-import mentor.main.institute.*;
+//import mentor.main.institute.*;
 
 public class Person {
 
