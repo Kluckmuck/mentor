@@ -1,10 +1,19 @@
 package mentor.gui;
 
-public class MainFrame extends JFrame {
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class MainFrame extends AbstractFrame {
 
   public MainFrame(String title) {
     super(title);
 
-    setLayout(new GridBagLayout());
+    //GRIDBAGLAYOUT
+    GridBagConstraints gc = getGBC();
+  }
+
+  public void run() {
+
   }
 }
