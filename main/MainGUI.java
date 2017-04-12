@@ -1,6 +1,6 @@
 package mentor.main;
 
-import mentor.gui.MainFrame;
+import mentor.gui.frame.MainFrame;
 
 public class MainGUI {
   public static void main(String[] args) {

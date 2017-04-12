@@ -1,4 +1,4 @@
-package mentor.gui;
+package mentor.gui.frame;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -6,14 +6,14 @@ import javax.swing.*;
 
 public class AbstractFrame extends JFrame {
 
-  private AbstractFrame aFrame;
+  private static AbstractFrame aFrame;
   private GridBagConstraints gc;
 
   public AbstractFrame(String title) {
     super(title);
 
     //FRAME
-    aFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    //aFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 
     //GRIDBAGLAYOUT
@@ -25,5 +25,10 @@ public class AbstractFrame extends JFrame {
 
   public GridBagConstraints getGBC() {
     return gc;
+  }
+
+  public static void run() {
+    aFrame.pack();
+    aFrame.setVisible(true);
   }
 }
