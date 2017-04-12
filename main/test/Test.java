@@ -14,12 +14,12 @@ public class Test {
     Calendar rightNow = Calendar.getInstance();
     rightNow.set(1994, 3, 10);
 
-    Person p = new Person("Viktor", "Lundberg", rightNow, "0706566805");
+    Person p = new Person("Viktor", "Lundberg", rightNow, "0706566805", "göteborg");
     ArrayList<Adept> adeptList = new ArrayList<Adept>();
     Company company = new Company("Ica");
-    Mentor m = new Mentor("Viktor", "Lundberg", rightNow, "0706566805", adeptList, company);
+    Mentor m = new Mentor("Viktor", "Lundberg", rightNow, "0706566805", "göteborg", adeptList, company);
     School school = new School("GU");
-    Adept a = new Adept("Karl", "Lundberg", rightNow, "0706566805", m, school);
+    Adept a = new Adept("Karl", "Lundberg", rightNow, "0706566805", "göteborg", m, school);
     adeptList.add(a);
 
     System.out.println(m.toString());
