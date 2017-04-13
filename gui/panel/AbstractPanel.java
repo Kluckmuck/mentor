@@ -7,22 +7,17 @@ import javax.swing.*;
 public class AbstractPanel extends JPanel {
 
   private static AbstractPanel aPanel;
-  private GridBagConstraints gc;
 
   public AbstractPanel() {
 
-    //Panel
-    aPanel.setVisible(true);
-
-
-    //GRIDBAGLAYOUT
-    setLayout(new GridBagLayout());
-    GridBagConstraints gc = new GridBagConstraints();
-    gc.fill = GridBagConstraints.HORIZONTAL;
-
   }
 
-  public GridBagConstraints getGBC() {
-    return gc;
-  }
+  protected JComponent makeTextPanel(String text) {
+        JPanel panel = new JPanel(false);
+        JLabel filler = new JLabel(text);
+        filler.setHorizontalAlignment(JLabel.CENTER);
+        panel.setLayout(new GridLayout(1, 1));
+        panel.add(filler);
+        return panel;
+    }
 }

@@ -9,14 +9,24 @@ import mentor.gui.panel.*;
 public class MainFrame extends AbstractFrame {
 
   private RoofPanel roofPanel;
+  private GridBagConstraints gc;
 
   public MainFrame(String title) {
     super(title);
 
+    /*Dimension size = getPreferredSize();
+    size.width = 250;
+    setPreferredSize(size);*/
+
     //GRIDBAGLAYOUT
-    GridBagConstraints gc = getGBC();
+    setLayout(new GridBagLayout());
+    GridBagConstraints gc = new GridBagConstraints();
+    gc.fill = GridBagConstraints.HORIZONTAL;
+
+    //ROOFPANEL
     gc.gridx = 0;
     gc.gridy = 0;
+    roofPanel = new RoofPanel();
     add(roofPanel, gc);
   }
 }
