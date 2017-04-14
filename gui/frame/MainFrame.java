@@ -7,6 +7,7 @@ import java.util.*;
 import java.io.*;
 
 import mentor.gui.panel.*;
+import mentor.gui.list.*;
 
 public class MainFrame extends JFrame {
 
@@ -14,6 +15,8 @@ public class MainFrame extends JFrame {
   private RoofPanel roofPanel;
   private MainFrame mainFrame;
   private UserPanel userPanel;
+  private MentorList mentorList;
+  private AdeptList adeptList;
 
   private GridBagConstraints gc;
 
@@ -26,12 +29,12 @@ public class MainFrame extends JFrame {
     gc.fill = GridBagConstraints.HORIZONTAL;
 
     //ROOFPANEL
-    gc.weightx = 1;
+    /*gc.weightx = 1;
     gc.weighty = 0.5;
     gc.gridx = 0;
     gc.gridy = 0;
     roofPanel = new RoofPanel();
-    add(roofPanel, gc);
+    add(roofPanel, gc);*/
 
     //USERPANEL
     gc.weightx = 1;
@@ -40,6 +43,16 @@ public class MainFrame extends JFrame {
     gc.gridy = 1;
     userPanel = new UserPanel();
     add(userPanel, gc);
+
+    //MENTORLIST
+    gc.gridx++;
+    mentorList = new MentorList();
+    add(mentorList, gc);
+
+    //ADEPTLIST
+    gc.gridx++;
+    adeptList = new AdeptList();
+    add(adeptList, gc);
   }
 
   public void run() {
