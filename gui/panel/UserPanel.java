@@ -3,20 +3,27 @@ package mentor.gui.panel;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.*;
+import java.util.*;
 
 import mentor.gui.textfield.*;
 
 public class UserPanel extends AbstractPanel {
 
-  NameTextField fNameTxt = new NameTextField(10);
-  NameTextField lNameTxt = new NameTextField(10);
-  NameTextField birthTxt = new NameTextField(10);
-  NameTextField mobileTxt = new NameTextField(10);
-  NameTextField cityTxt = new NameTextField(10);
-  NameTextField companyTxt = new NameTextField(10);
-  JLabel label;
+  private NameTextField fNameTxt = new NameTextField(10);
+  private NameTextField lNameTxt = new NameTextField(10);
+  private NameTextField birthTxt = new NameTextField(10);
+  private NameTextField mobileTxt = new NameTextField(10);
+  private NameTextField cityTxt = new NameTextField(10);
+  private NameTextField companyTxt = new NameTextField(10);
+  private ArrayList<NameTextField> textFieldList = new ArrayList<>();
+
+  private JLabel label;
+  private JButton addBtn = new JButton("Add Mentor");
 
   public UserPanel () {
+
+    textFieldList = createTextFieldList();
 
     //LAYOUT
     setLayout(new GridBagLayout());
@@ -72,5 +79,53 @@ public class UserPanel extends AbstractPanel {
     add(label, gc);
     gc.gridx++;
     add(companyTxt, gc);
+
+    //ADD-BUTTON
+    gc.gridx = 0;
+    gc.gridy++;
+    gc.gridwidth = 2;
+    add(addBtn, gc);
+
+    addBtn.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        try {
+          if (textFieldCheck() == true) {
+            System.out.println("TRUE");
+          }
+        } catch (RuntimeException error) {
+          System.out.println(error);
+        }
+      }
+    });
+  }
+
+  public void updateBtn() {
+    /*if (textValues() == false) {
+      addBtn.setEnabled(false);
+    } else {
+      addBtn.setEnabled(true);
+    }*/
+  }
+
+  public boolean textFieldCheck() {
+    for (NameTextField item : textFieldList) {
+      System.out.print(item.getText());
+      //GOOGLA STRING EQUALS
+      if (item.getText() == "hej") {
+        System.out.print(item.getText());
+        return false;
+      } 
+    }
+    return true;
+  }
+
+  public ArrayList<NameTextField> createTextFieldList() {
+    textFieldList.add(fNameTxt);
+    textFieldList.add(lNameTxt);
+    textFieldList.add(birthTxt);
+    textFieldList.add(mobileTxt);
+    textFieldList.add(cityTxt);
+    textFieldList.add(companyTxt);
+    return textFieldList;
   }
 }

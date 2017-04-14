@@ -18,6 +18,7 @@ public class MainFrame extends JFrame {
   private GridBagConstraints gc;
 
   public MainFrame(String title) {
+    super(title);
 
     //GRIDBAGLAYOUT
     setLayout(new GridBagLayout());
