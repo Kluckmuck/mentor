@@ -26,7 +26,7 @@ public class UserPanel extends AbstractPanel {
     label = fNameTxt.getLabel();
     add(label, gc);
     gc.gridx++;
-    System.out.println(gc.gridy);
+    //System.out.println(gc.gridx);
     add(fNameTxt, gc);
 
     //LAST NAME

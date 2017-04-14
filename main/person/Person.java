@@ -41,8 +41,8 @@ public class Person {
     return fName + " " + lName;
   }
 
+  //Get age
   public int getAge() {
-    //Get age
     Calendar currentDate = Calendar.getInstance();
     currentYear = currentDate.get(Calendar.YEAR);
     currentMonth = currentDate.get(Calendar.MONTH);
@@ -62,4 +62,6 @@ public class Person {
     //OR same month and Persons day is larger than current DAY
     return age = currentYear - pYear - 1;
   }
+
+
 }

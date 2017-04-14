@@ -3,6 +3,8 @@ package mentor.gui.frame;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.util.*;
+import java.io.*;
 
 import mentor.gui.panel.*;
 
@@ -40,9 +42,23 @@ public class MainFrame extends JFrame {
   }
 
   public void run() {
+    language();
     this.setSize(1000,800);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //this.pack();
+    this.pack();
     this.setVisible(true);
+  }
+
+  public void language() {
+    ArrayList<String> infoArray = new ArrayList<String>();
+    try {
+      Scanner sc = new Scanner(new File ("mentor/lang/eng.txt"));
+      while (sc.hasNext() == true ){
+          infoArray.add(sc.nextLine());
+      }
+    }
+    catch(FileNotFoundException catchException){
+      System.out.println(catchException);
+    }
   }
 }

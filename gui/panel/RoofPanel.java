@@ -21,9 +21,9 @@ public class RoofPanel extends AbstractPanel {
 
     //TABBEDPANE1
     JComponent panel1 = makeTextPanel("Panel #1");
+    panel1.setPreferredSize(new Dimension(410, 100));
     tabbedPane.addTab("Tab 1", icon, panel1, "Does nothing");
     tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
-    panel1.setPreferredSize(new Dimension(410, 50));
 
     //TABBEDPANE2
     JComponent panel2 = makeTextPanel("Panel #1");
