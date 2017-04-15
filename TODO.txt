@@ -1,0 +1,1 @@
+Gör en funktion som automatiskt skapar label + textfield. I AbstractPanel.

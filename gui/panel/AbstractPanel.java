@@ -12,6 +12,10 @@ public class AbstractPanel extends JPanel {
 
   }
 
+  public void createInputPanel () {
+
+  }
+
   protected JComponent makeTextPanel(String text) {
         JPanel panel = new JPanel(false);
         JLabel filler = new JLabel(text);
