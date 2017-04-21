@@ -90,7 +90,7 @@ public class UserPanel extends AbstractPanel {
       public void actionPerformed(ActionEvent e) {
         try {
           if (textFieldCheck() == true) {
-            System.out.println("TRUE");
+            //System.out.println("TRUE");
           }
         } catch (RuntimeException error) {
           System.out.println(error);
@@ -100,21 +100,18 @@ public class UserPanel extends AbstractPanel {
   }
 
   public void updateBtn() {
-    /*if (textValues() == false) {
-      addBtn.setEnabled(false);
-    } else {
-      addBtn.setEnabled(true);
-    }*/
+    //LIST?? Regler
+    if () {
+
+    }
   }
 
+  //VILKOR FÖR TEXT (I TEXTFIELD)
   public boolean textFieldCheck() {
     for (NameTextField item : textFieldList) {
-      System.out.print(item.getText());
-      //GOOGLA STRING EQUALS
-      if (item.getText() == "hej") {
-        System.out.print(item.getText());
-        return false;
-      } 
+      if (Objects.equals(item.getText(), "")) {
+        System.out.println(Objects.equals(item.getText(), ""));
+      }
     }
     return true;
   }

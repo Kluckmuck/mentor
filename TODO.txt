@@ -1,1 +1,18 @@
+//GUI
 Gör en funktion som automatiskt skapar label + textfield. I AbstractPanel.
+Metod som undersöker om texten i textfield klarar kraven.
+Flera språk.
+Möjligt att ändra mentorer/adepts
+Sök funktion GUI
+Matchningsfunktion GUI.
+
+//MAIN
+Metod som skapar mentors
+Metod som skapar adepts
+Metod som ändrar adepts
+Sök funktion.
+Matchningsfunktion.
+
+//DB
+Inläsning av db.
+Skrivning till db.
