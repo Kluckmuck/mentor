@@ -1,5 +1,6 @@
 //GUI
 Gör en funktion som automatiskt skapar label + textfield. I AbstractPanel.
+  En metod som skapar textfield, och tar vad arg för focuslost.
 Metod som undersöker om texten i textfield klarar kraven.
 Flera språk.
 Möjligt att ändra mentorer/adepts
